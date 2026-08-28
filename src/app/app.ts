@@ -18,6 +18,8 @@ export class App {
   protected readonly title = signal('loja-tp1-angular');
   sobre?: string;
 
+  x = signal(10);
+
   receberSobre(msg: string): void{
     this.sobre = msg;
   }
