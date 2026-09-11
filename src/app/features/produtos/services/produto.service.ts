@@ -54,5 +54,8 @@ listar(): Observable<Produto[]>{
     delay(250)
 );
 }
+getByID(id: number): Observable<Produto|undefined>{
+  return of(this.listaMock.find(p => p.id == id)).pipe(delay(500));
+}
 
 }
