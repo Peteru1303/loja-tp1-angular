@@ -12,7 +12,7 @@
                 <img class="thumb" [src]="produto()!.imageUrl"/>
                 <div class="infos">
                     <h2>{{produto()?.nome}}</h2>
-                    <p class="descricao">{{produto()!.descricao}}</p>
+                    <p class="descricao"{{produto()!.descricao}}></p>
                     @if(produto()!.promo){
                         {{ produto()!.preco | desconto:10 | currency:'BRL':'symbol':'1.2-2'}}
                     }
