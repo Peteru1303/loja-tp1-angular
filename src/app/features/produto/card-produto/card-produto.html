@@ -2,7 +2,7 @@
     <img class="thumb" [src]="this.produto().imageUrl"/>
     <div class = "conteudo">
         <header class='cabeçalho'>
-            <h3 classs ="titulo">{{this.produto().nome }}</h3>
+            <h3 classs ="titulo">{{this.produto().nome | truncar:25:true:'...' }}</h3>
 
             @switch (produto().estado){
                 @case('novo'){
@@ -17,7 +17,7 @@
             }
         </header>
         
-        <p class="desc">{{ produto().descricao}}</p>
+        <p class="desc">{{ produto().descricao | truncar:25:true:'...'}}</p>
 
         <!-- <div class="linhapreco">
             <span class="preco">{{produto().preco | currency: 'BRL':'symbol':'1.2-2' }}</span>
