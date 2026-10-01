@@ -6,7 +6,8 @@ import { Sobre } from './features/sobre/sobre';
 
 export const routes: Routes = [
     {path: '', component: Home},   
-    {path: 'produtos', component: ListaProdutos},    
+    {path: 'produtos', component: ListaProdutos}, 
+    {path: 'produtos/novo', component: ProdutoForm},      
     {path: 'produtos/:id', component: ProdutoDetalhe},    
     {path: 'sobre', component: Sobre},    
     {path: '**', redirectTo: ''},    
